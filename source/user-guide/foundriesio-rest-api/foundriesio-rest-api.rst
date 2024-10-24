@@ -3,8 +3,8 @@
 Foundries.io REST API
 =====================
 
-Foundries.io™ implements a `REST API`_ that allows users to interact with their Factory and devices.
-This section examples use of the REST API with cURL_ (command-line tool for transferring data using various network protocols).
+The FoundriesFactory™ Platform implements a `REST API`_ that allows you to interact with you Factory and devices.
+This section examples use of the REST API with `CURL`_ (command-line tool for transferring data using various network protocols).
 
 To follow this section, it is important to have:
 
@@ -16,9 +16,12 @@ Prerequisites
 Creating Token
 --------------
 
-To interact with the `Foundries.io API <https://api.foundries.io/ota/>`_, create a token.
+.. tip::
+   To access the API, you must first login to your Factory.
 
-Go to `Tokens <https://app.foundries.io/settings/tokens/>`_ and create a new **Api Token** by clicking on 
+To interact with the `Foundries.io API`_, create a token.
+
+Go to `Tokens <https://app.foundries.io/settings/tokens/>`_ and create a new **API Token** by clicking on 
 :guilabel:`+ New Token`.
 
 Complete with a **Description** and **Expiration date**, and select :guilabel:`next`.
@@ -36,7 +39,7 @@ Save the output, as this is is your ``<API_TOKEN>`` value.
 Getting Started
 ---------------
 
-The `Foundries.io API <https://api.foundries.io/ota/>`_  includes a complete `OpenAPI <https://swagger.io/specification/>`_ definition.
+The `Foundries.io API`_  includes a complete `OpenAPI <https://swagger.io/specification/>`_ definition.
 To get started, configure your host terminal with the variables below:
 
 .. prompt:: bash host:~$, auto
@@ -53,7 +56,7 @@ Device List
 
 This function returns a list of devices registered in your Factory.
 The HTTP response includes the same data from your Factory's :guilabel:`Devices` tab.
-Documentation can be found at `Foundries.io API <https://api.foundries.io/ota/>`_ under `devices`.
+Documentation can be found at `Foundries.io API`_ under ``devices``.
 
 Run:
 
@@ -101,7 +104,7 @@ Targets List
 
 This function returns a list of your Factory targets.
 The HTTP response includes the same data from the :guilabel:`Targets` tab of the Factory.
-You can find documentation at `Foundries.io API <https://api.foundries.io/ota/>`_ under `factories`.
+You can find documentation at `Foundries.io API`_ under ``factories``.
 
 Run:
 
@@ -261,7 +264,7 @@ Define the variable ``DEVICE_NAME`` and configure your device using cURL_ with `
 Learning More About the REST API
 --------------------------------
 
-Logged into http://app.foundries.io, you may interact with the REST API  from your browser at http://api.foundries.io/ota. 
+Logged into http://app.foundries.io, you may interact with the REST API from your browser at http://api.foundries.io/ota. 
 
 1. Click on the operation to test.
    This shows the :guilabel:`Try it out` option.
@@ -284,3 +287,4 @@ This allows you to explore the Foundries.io REST API and its possibilities.
 
 .. _REST API: https://en.wikipedia.org/wiki/Representational_state_transfer
 .. _cURL: https://curl.se/
+.. _Foundries.io API: https://api.foundries.io/
