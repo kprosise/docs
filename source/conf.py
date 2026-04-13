@@ -50,7 +50,7 @@ if pr is None:
 # Tags to append to the version, if any.
 # (This doesn't affect links to artifacts.)
 mp_tags = ''
-if mp_version.startswith('git-'):
+if mp_version.startswith('git-') or mp_version == 'dev':
     if pr == 'False':
         mp_tags = 'local-dev'
     else:
@@ -92,7 +92,7 @@ else:
 
 #-- Get version used for link to offline docs page -----------------------------
 
-if mp_version.startswith('git-'):
+if mp_version.startswith('git-') or mp_version == 'dev':
     gh_release = 'releases'
 else:
     gh_release = 'releases/tag/mp-' + mp_version
@@ -114,7 +114,7 @@ html_context = {
 
 # Derive the subscriber tags to use for this build from the
 # corresponding version information.
-if mp_version.startswith('git-'):
+if mp_version.startswith('git-') or mp_version == 'dev':
     docker_tag = 'latest'
 else:
     docker_tag = mp_version
