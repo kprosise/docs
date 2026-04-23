@@ -42,11 +42,7 @@ jobs:
       - name: set release name
         run: |
           echo "release tag: $TAG"
-#          if [[ $TAG == mp-* ]]; then
           export RELEASE="$(echo $TAG | sed -r 's/^.{3}//')"
-#          else
-#          export RELEASE="$TAG"
-#          fi
           echo "VERSION=$RELEASE" >> "$GITHUB_ENV"
 
       - name: Build docs
