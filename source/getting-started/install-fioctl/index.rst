@@ -51,7 +51,7 @@ We use `GitHub Releases`_ to distribute static golang binaries.
 
            .. parsed-literal::
 
-              FIOCTL_VERSION="|fioctl_version|"
+              export FIOCTL_VERSION="|fioctl_version|"
 
            Download the binary with curl:
 
@@ -77,7 +77,7 @@ We use `GitHub Releases`_ to distribute static golang binaries.
 
            .. parsed-literal::
 
-                FIOCTL_VERSION="|fioctl_version|"
+                export FIOCTL_VERSION="|fioctl_version|"
 
            Download the binary with curl:
 

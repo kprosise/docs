@@ -56,6 +56,9 @@ if mp_version.startswith('git-') or mp_version == 'dev':
     else:
         mp_tags = 'dev'
 
+if fioctl_version is None:
+    fioctl_version = 'latest'
+
 # -- Search Configuration ------------------------------------------------
 
 meilisearch_index_key = os.environ.get('MEILISEARCH_INDEX_KEY')
