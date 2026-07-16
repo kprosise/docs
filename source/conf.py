@@ -19,7 +19,8 @@ from urllib.request import urlopen
 
 mp_version = os.environ.get('MP_UPDATE_VERSION')
 lmp_build = os.environ.get('LMP_BUILD')
-if mp_version is None:
+
+if mp_version is None or mp_version == "":
     try:
         git_version = subprocess.check_output(['git', 'describe', '--tags'])
     except subprocess.CalledProcessError:
